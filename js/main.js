@@ -2,8 +2,11 @@
 //Step 2 the function and event listener
 function bookSearch() {
 //Step 3 getting user data and clearing the previous search
-		var search = document.getElementById('search').value
+		var search = document.getElementById('search').value;
 		document.getElementById("results").innerHTML = ""
+
+
+
 //Step 4 setup the AJAX call for the API data based on the user's search term
 	$.ajax({
 		url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
@@ -16,8 +19,18 @@ function bookSearch() {
 		},
 		type: 'GET'
 	});
+
 }
 
+//Enter Key
+document.getElementById('search').addEventListener('keyup', function(event){
+	event.preventDefault();
+	if(event.keyCode === 13){
+		document.getElementById('button').click(bookSearch, false);
+	}
+});
+
+//Mouse Click
 document.getElementById('button').addEventListener('click', bookSearch, false)
 
 
