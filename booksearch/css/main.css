@@ -1,23 +1,25 @@
-body, html {
-	height: 100%;
+html{
+    height: 100%;
 }
 
-.bg {
-    /* The image used */
-    background-image: url("../img/aislebooks.jpg");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
+body{
+	background-image: url("../img/books.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0px auto;
 }
 
 h1 {
 	text-align: center;
-	color: blue;
+	color: #000000;
+    font-family: 'Courier';
+
+}
+
+span {
+    background-color: #fffff0;
+    border-radius: 5px;
 }
 
 .input {
@@ -25,6 +27,22 @@ h1 {
 }
 
 h2 {
-	color: red;
+	color: #000000;
     text-align: center;
+}
+
+#results {
+    background-color: #FFFFE0;
+    margin: 0 auto; 
+    width: 70%;
+    font-family: 'Courier';
+    border-radius: 10px;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+#search {
+    border-color: orange;
+    border-style: solid double;
+    height: 20px;
 }
